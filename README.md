@@ -1,9 +1,11 @@
-# Description de Projet: Gestion des étudiants
+# Student Management
+This is the English version of the README. For French, please see [README_FR.md](./README_FR.md).
 
-> Ce projet présente une application desktop très simple pour la gestion des étudiants.
-Cette application est programmée en Java SE sous Eclipse et reliée à une base de données ORACLE/SQL. Son but est de permettre le stockage et le traitement des notes des étudiants , la recherche rapide ( des étudiants et des enseignants ) ainsi que quelques requêtes.
+## Description 
 
-##  Outils et environnement de développement 
+> This project involves a very simple desktop application for student management. The application is programmed in Java SE using Eclipse and connected to an ORACLE/SQL database. Its purpose is to enable the storage and processing of student grades, quick searches for both students and teachers, as well as a few queries.
+
+## Tools and Development Environment
 
 <div align="center">
        <b> ORACLE/SQL </b>
@@ -11,15 +13,15 @@ Cette application est programmée en Java SE sous Eclipse et reliée à une base
     -- <b> IDE ( Eclipse ) </b>
 </div>
 
-## Ce qu'on peut faire avec l'application ( Les fonctionnalités )
+## What can be done with the application (Features)
 
-1) L'application est utilisée par les administrateurs de l'établissement scolaire et ils peuvent utiliser les fonctionnalités suivantes:
+1) The application is used by school administrators, and they can utilize the following features:
 
-   - Enregistrer les informations sur chaque étudiant dans la base de données ( Insertion )
-   - Enregistrer les  informations sur chaque enseignant dans la base de données ( Insertion )
-   - Afficher la liste des étudiants et des enseignants 
-   - Afficher les moyennes générales des etudiants
-   - Exécuter certaines requêtes
+   - Save information about each student in the database (Insertion)
+   - Save information about each teacher in the database (Insertion)
+   - Display the list of students and teachers
+   - Display the overall averages of students
+   - Execute certain queries
   
 <table align="center">
   <tr>
@@ -32,8 +34,7 @@ Cette application est programmée en Java SE sous Eclipse et reliée à une base
   </tr>
 </table>
 
-###### Présentation des interfaces 
-
+###### Presentation of Interfaces
 <table align="center">
   <tr>
     <th  colspan="3"> Authentification </th>
@@ -44,7 +45,7 @@ Cette application est programmée en Java SE sous Eclipse et reliée à une base
  </table>
 <table align="center">
    <tr>
-    <th colspan="3"> Home Page, Insertion et Affichage </th>
+    <th colspan="3"> Home Page, Insertion and Display </th>
   </tr>
   <tr>
     <td > <img src="captures/capt_4.PNG" /> </td> <td> <img src="captures/capt_5.PNG" />  </td>  <td > <img src="captures/capt_7.PNG" /> </td>
@@ -52,17 +53,16 @@ Cette application est programmée en Java SE sous Eclipse et reliée à une base
  </table>
  <table align="center">
   <tr>
-    <th colspan="2">  Requêtes </th>
+    <th colspan="2">  Queries </th>
   </tr>
   <tr>
    <td> <img src="captures/capt_8.PNG" />  </td> <td> <img src="captures/capt_9.PNG" /> </td>  
   </tr>
 </table>
 
-2)  L'application est utilisée aussi par les étudiants, Où chaque étudiant peut faire que ça:
+2)  The application is also used by students, where each student can do the following:
 
-     - Accéder à ses informations en saisisssant son numéro étudiant 
-
+     - Access their information by entering their student ID number
 <table align="center">
   <tr>
     <th> User </th>
@@ -74,7 +74,7 @@ Cette application est programmée en Java SE sous Eclipse et reliée à une base
   </tr>
 </table>
 
-###### Présentation des interfaces 
+###### Presentation of Interfaces
 
 <table align="center">
   <tr>
@@ -82,10 +82,10 @@ Cette application est programmée en Java SE sous Eclipse et reliée à une base
   </tr>
 </table>
 
-3) L'enseignant peut lui aussi accéder à l'aplication et : 
+3) The teacher can also access the application and: 
 
-    - Accéder à ses informations en saisisssant son code identifiant
-    - Insérer un enseignant dans la base de données 
+    - Access his information by entering his identifier code.
+    - Insert a teacher into the database.
  
 <table align="center">
   <tr>
@@ -98,7 +98,7 @@ Cette application est programmée en Java SE sous Eclipse et reliée à une base
   </tr>
 </table>
 
-###### Présentation des interfaces 
+###### Presentation of Interfaces 
    
 <table align="center">
    <tr>
@@ -109,24 +109,22 @@ Cette application est programmée en Java SE sous Eclipse et reliée à une base
   </tr>
  </table>
 
-## Tables de la base de données : Schéma relationnel 
+## Database Tables: Relational Schema 
 
-La modélisation est une étape fondamentale de la conception de la BD dans la mesure où, d’une part, on y détermine le contenu de la BD et, 
-d’autre part, on y définit la nature des relations entre les concepts principaux.
+Modeling is a fundamental step in the database design process where, on the one hand, the content of the database is determined, and on the other hand, the nature of the relationships between the main concepts is defined.
 
-- ( * : désigne une Clé étrangère / Gris : Clé primaire ) 
+- ( * : Designates a Foreign Key / Gray: Primary Key ) 
 
-   - Etudiant (`matricule_etu`, nom_etu, prenom_etu, date_naissance)
-   - Unité (`code_Unité`, libelle, nbr_heures, matricule_ens*)
-   - Enseignant (`matricule_ens`, nom_ens, prenom_ens, âge)
-   - EtudiantUnité (`matricule_etu*,code_Unité*`, note_CC, note_TP, note_examen)
+   - Student (`student_id`, student_name, student_firstname, date_of_birth)
+   - Unit (`unit_code`, label, hours_number, teacher_id*)
+   - Teacher (`teacher_id`, teacher_name, teacher_firstname, age)
+   - StudentUnit (`student_id*, unit_code*`, cc_grade, tp_grade, exam_grade)
 
 </br></br>
 <table align="center">
   <tr>
     <th>
-    📝 Tous les scripts SQL et les fichiers nécessaires pour la création de la BD sont disponibles. Cette petite application peut avoir préalablement 
-           prévus des modifications, tel qu'on peut rajouter les traitements qui manquent comme la modification et la suppression de données.
+    📝 All SQL scripts and necessary files for creating the database are available. This small application may have anticipated modifications, such as adding missing functionalities like data modification and deletion.
     </th>
   </tr>
 </table>
